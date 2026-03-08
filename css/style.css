@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&display=swap');
+
+*{
+   box-sizing:border-box;
+   margin:0;
+   padding:0;
+}
+
+body{
+   font-family:Arial, sans-serif;
+}
+
+
+/* start navbar */
+
+nav{
+   display:flex;
+   justify-content:space-between;
+   align-items:center;
+   background:#000;
+   padding:10px 20px;
+   flex-wrap:wrap;
+   /*position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 1000;*/
+   
+}
+
+.logo .shalaan{
+   width:200px;
+   height:55px;
+}
+.menu-toggle{
+display:none;
+font-size:30px;
+color:white;
+cursor:pointer;
+}
+
+nav ul{
+   list-style:none;
+   display:flex;
+   gap:40px;
+   text-transform:capitalize;
+}
+
+nav ul li a{
+   text-decoration:none;
+   color:white;
+   position:relative;
+   transition:.3s;
+}
+
+/* navbar animation */
+
+nav ul li a::after{
+   content:"";
+   position:absolute;
+   left:0;
+   bottom:-5px;
+   width:0%;
+   height:2px;
+   background:#00bcd4;
+   transition:.3s;
+}
+
+nav ul li a:hover::after{
+   width:100%;
+}
+
+nav ul li a:hover{
+   color:#00bcd4;
+}
+
+/* language */
+
+.languge ul li a{
+   border:1px solid #fff;
+   border-radius:4px;
+   padding:6px 10px;
+}
+
+.languge ul li a:hover{
+   background:white;
+   color:#00bcd4;
+}
+
+/* end navbar */
+
+
+/* hero */
+
+.hero{
+   /*padding-top: 80px;*/
+   text-align:center;
+   background:linear-gradient(to right,#00bcd4,#2196f3);
+   padding:10px;
+}
+
+.hero .move-marq img{
+   width:130px;
+   height:120px;
+   margin:10px 40px;
+   border-radius:10px;
+}
+
+/* intro */
+
+.intro{
+    display: flex;
+    background-color: #d7e0e7c2;
+    justify-content: space-between;
+    padding: 20px 30px;
+    animation:fadeUp 1s ease;
+}
+.intro .text{
+    text-align: center;
+    align-items: center;
+    max-width: fit-content;
+    line-height: 90px;
+
+}
+.intro .text h1{
+    text-transform: capitalize;
+    color:  #044952;
+    font-size: 40px;
+    font-family: "Playwrite NZ Basic", cursive;
+
+}
+.intro .text p{
+    text-transform: capitalize;
+    font-size: large;
+    line-height: 20px;
+}
+.intro .text .contact button{
+    background-color:  #beddf7d5;
+    width: 100px;
+    height: 50px;
+    border: 1px solid  #044952;
+    border-radius: 10px;
+    margin: 20px;
+    text-transform: capitalize;
+}
+.intro .text .contact button:hover{
+    background-color: #044952;
+    color: #ffffff;
+    cursor: pointer;
+}
+.intro .text .icon{
+    display: flex;
+    width: 90%;
+    position: relative;
+    justify-content: space-around;
+}
+
+.intro .text .icon img{
+    border-radius: 15px;
+}
+.intro .text .icon span{
+    margin-left: 10px;
+    position: absolute;
+    bottom: 10px;
+
+}
+
+.intro .img-text img{
+    width:100%;
+   max-width:500px;
+   border-radius:20px;
+}
+
+/* body2 */
+
+.body2{
+   display:flex;
+   align-items:center;
+   justify-content:space-between;
+   margin:40px;
+   gap:40px;
+   flex-wrap:wrap;
+   animation:fadeUp 1.2s ease;
+}
+
+.body2 .text{
+   max-width:650px;
+}
+
+.body2 h1{
+    font-family:"Playwrite NZ Basic", cursive;
+    color:#044952;
+    font-size:38px;
+    margin-bottom:20px;
+}
+
+.body2 span{
+   font-size:20px;
+   font-weight:bold;
+   color:#044952;
+}
+h3{
+    color:#044952;
+    margin-top: 15px;
+}
+
+.body2 p{
+    opacity:.7;
+    margin-bottom:15px;
+}
+
+.body2 .img-text img{
+   width:100%;
+   max-width:500px;
+   border-radius:20px;
+}
+
+/* body3 */
+
+.body3{
+   background:#eee;
+   padding:40px 20px;
+   animation:fadeUp 1.3s ease;
+}
+
+.body3 .text1{
+   text-align:center;
+   margin-bottom:30px;
+   font-family:"Playwrite NZ Basic", cursive;
+   color:#044952;
+   text-transform: capitalize;
+}
+
+.body3 .img-body3{
+   display:flex;
+   justify-content:center;
+   gap:30px;
+   flex-wrap:wrap;
+}
+
+.text-body3,
+.text-body3-2{
+   background:white;
+   border:1px solid #ddd;
+   border-radius:15px;
+   padding:20px;
+   text-align:center;
+   transition:.4s;
+}
+
+.text-body3{
+   width:250px;
+}
+
+.text-body3-2{
+     width:320px;
+}
+
+.text-body3:hover, .text-body3-2:hover{
+   transform:translateY(-10px);
+   box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+.body3 img{
+border-radius:50%;
+}
+
+/* products */
+h1{
+    text-align: center;
+    padding-top: 20px;
+    text-transform: capitalize;
+    color:#044952;
+    font-family:"Playwrite NZ Basic", cursive;
+
+}
+
+.products{
+   display:grid;
+   grid-template-columns:repeat(3,1fr);
+   gap:30px;
+   padding:50px;
+   animation:fadeUp 1.4s ease;
+}
+
+.card{
+   border:1px solid #ddd;
+   padding:15px;
+   text-align:center;
+   border-radius:10px;
+   transition:.4s;
+   background:white;
+}
+
+.card:hover{
+   transform:translateY(-10px);
+   box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.card img{
+   width:100%;
+   height:200px;
+   object-fit:cover;
+   border-radius:10px;
+}
+
+.old-price{
+   text-decoration:line-through;
+   color:gray;
+}
+
+.new-price{
+   color:red;
+   font-weight:bold;
+}
+
+.btn{
+   display:inline-block;
+   padding:8px 15px;
+   background:black;
+   color:white;
+   text-decoration:none;
+   margin-top:10px;
+   border-radius:5px;
+   transition:.3s;
+}
+
+.btn:hover{
+   background:#00bcd4;
+}
+
+/* footer */
+
+.foot{
+   background:black;
+   color:#ddd;
+   display:flex;
+   justify-content:space-around;
+   flex-wrap:wrap;
+   padding:30px;
+   gap:40px;
+}
+
+h4{
+   color:#00bcd4;
+   font-size:20px;
+   margin-bottom:10px;
+   text-transform: capitalize;
+}
+
+.company{
+   max-width:400px;
+}
+
+.company p{
+   line-height:22px;
+}
+
+/* social */
+
+.social-icons{
+   text-align:center;
+   background:#141414;
+   padding:15px;
+}
+
+.social-icons a i{
+   font-size:30px;
+   margin:5px;
+   color:#00bcd4;
+   background:#1a1a1a;
+   border-radius:10px;
+   padding:8px;
+   transition:.4s;
+}
+
+.social-icons a i:hover{
+   transform:scale(1.2);
+   color:white;
+}
+
+/* End social*/
+.copyright{
+   text-align:center;
+   background:#000;
+   color:#bbb;
+   padding:1px;
+   font-size:14px;
+}
+
+.copyright span{
+   color:#00bcd4;
+   font-weight:bold;
+}
+
+/* Media */
+@media(max-width:768px){
+
+.menu-toggle{
+display:block;
+position: absolute;
+left: 15px;
+}
+
+.nav-links{
+display:none;
+flex-direction:column;
+position:absolute;
+top:80px;
+left:0px;
+width:20%;
+background:black;
+text-align:center;
+padding:20px 0;
+z-index:1000;
+}
+
+.languge ul li a{
+display:block;
+position: absolute;
+right: 15px;
+top: 15px;
+}
+.nav-links li{
+padding:15px 0;
+border-top:1px solid #333;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+}
+
+@keyframes fadeUp{
+
+from{
+  opacity:0;
+  transform:translateY(40px);
+}
+
+to{
+   opacity:1;
+   transform:translateY(0);
+}
+
+}
+
+/* responsive */
+
+@media(max-width:900px){
+
+.products{
+   grid-template-columns:repeat(2,1fr);
+}
+}
+
+
+
+@media(max-width:768px){
+
+nav{
+   flex-direction:column;
+   gap:15px;
+}
+
+nav ul{
+   flex-direction:column;
+   gap:15px;
+   text-align:center;
+}
+
+.intro{
+    flex-direction:column;
+    text-align:center;
+}
+
+.body2{
+    flex-direction:column;
+    text-align:center;
+}
+
+}
+
+@media(max-width:600px){
+
+.products{
+    grid-template-columns:1fr;
+    padding:30px;
+}
+
+.hero .move-marq img{ 
+   width:100px;
+   height:90px;
+   margin:10px;
+}
+
+}
